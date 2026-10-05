@@ -34,13 +34,13 @@ $usuario = mysqli_fetch_assoc($resultado);
 // verificar se o usuario foi encontrado e se a senha está correta
 // password_verify() compara a senha digitada com o hash salvo
 // no banco
-if ($usuario && password_verify($senha, $usuario['senha'])){
-//login bem-sucedido: guarda o nome do usuario na sessão
-$_SESSION['nome'] = $usuario['nome'];
-// redireciona para o painel principal
-header("location: painel.php");
-exit();
-} else{
+if ($usuario && password_verify($senha, $usuario['senha'])) {
+    //login bem-sucedido: guarda o nome do usuario na sessão
+    $_SESSION['nome'] = $usuario['nome'];
+    // redireciona para o painel principal
+    header("location: painel.php");
+    exit();
+} else {
     // login inválido: redireciona de volta para login
     // com mensagem de erro
     header("location: login.php?erro=login");
