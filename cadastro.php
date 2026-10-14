@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="email">email</label>
-                <input type="email" id="email" name="nome" placeholder="digite seu email" required>
+                <input type="email" id="email" name="email" placeholder="digite seu email" required>
             </div>
             <div class="form-group">
                 <label for="senha">senha</label>
@@ -46,4 +46,5 @@
 
 </body>
 ''
+
 </html>

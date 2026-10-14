@@ -1,7 +1,7 @@
 <?php
 
 // inclui a verificação de sessão (protege a página de acesso não autorizado)
-inclucde(verificar_sessao . php);
+include("verificar_sessao.php");
 
 ?>
 

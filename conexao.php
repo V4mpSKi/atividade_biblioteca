@@ -8,6 +8,6 @@ $conexao = mysqli_connect(
 
 );
 
-if (!$conexao){
-   die("erro de conexão: " . mysqli_connect_error());
+if (!$conexao) {
+    die("erro de conexão: " . mysqli_connect_error());
 }
