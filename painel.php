@@ -32,7 +32,7 @@ include("verificar_sessao.php");
                 sair
             </a>
         </div>
-        <div class="dica-navegação">
+        <div class="dica-navegacao">
             <strong>fluxo:</strong>
             painel → cadastrar livro ou listar → editar / excluir
         </div>

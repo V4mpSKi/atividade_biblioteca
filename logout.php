@@ -1,39 +1,38 @@
 <?php
- 
+
 // logout.php
 // Encerra a sessão do usuário de forma segura.
 // Conceitos: session_destroy, limpeza de cookies, header anti-cache
- 
+
 // Inicia a sessão para poder destrui-la
 session_start();
- 
+
 // Limpa todas as variáveis da seessão (nome, etc.)
-$_SESSION = array ();
- 
+$_SESSION = array();
+
 // remove o cookie de sessão do navegador (se existir)
-if(int_get(session.seu_cookies)) {
+if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
-    setcookies(
+    setcookie(
         session_name(),
         '',
         time() - 4200,
-        $params["path"]
-        $params["domain"]
-        $params["secure"]
+        $params["path"],
+        $params["domain"],
+        $params["secure"],
         $params["httponly"]
- 
+
     );
 }
- 
+
 // Destrói completamente a sessão do servidor
 session_destroy();
- 
+
 // cabeçalhos que impedem o navegador de usar páginas em encache
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
-header("Expires: 0"):
- 
+header("Expires: 0");
+
 // redireciona parea pagina de login
-header(Location: login.php);
+header("Location: login.php");
 exit();
- 

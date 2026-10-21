@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 // salvar_livro.php
@@ -17,7 +17,7 @@ $autor = $_POST['autor'];
 $status = $_POST['status'];
 
 // monta o comando SQL INSERT para cadastrar o livro:
-$sql = "INSERT INTO livro (titulo, autor, status) VALUES ('$titulo', '$autor', '$status')";
+$sql = "INSERT INTO livros (titulo, autor, status) VALUES ('$titulo', '$autor', '$status')";
 
 // executa o INSERT no banco de dados
 mysqli_query($conexao, $sql);

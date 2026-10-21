@@ -45,12 +45,12 @@ include("verificar_sessao.php");
 
         </form>
 
-<!-- botão de voltar para o painel principal -->
- <a href="painel.php" class="bnt bnt-voltar">
-    voltar para o painel.
- </a>
+        <!-- botão de voltar para o painel principal -->
+        <a href="painel.php" class="btn btn-voltar">
+            voltar para o painel.
+        </a>
 
-        </div>
+    </div>
 </body>
 
 </html>
