@@ -18,7 +18,7 @@ $status = $_POST['status'];
 
 // Monta o comando SQL UPDATE para alterar os dados do livro
 $sql = "UPDATE livros SET titulo = '$titulo', autor = '$autor',
-$status = '$status' WHERE id = $id";
+status = '$status' WHERE id = $id";
 
 // Executa o UPDATE mo banco de dados
 mysqli_query($conexao, $sql);
